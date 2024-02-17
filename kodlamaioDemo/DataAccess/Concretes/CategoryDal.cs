@@ -27,12 +27,15 @@ public class CategoryDal : ICategoryDal
 
     public void Delete(int id)
     {
+        Console.WriteLine("Delete methodu çalıştı");
         Category category = GetCategoryById(id);
         categories.Remove(category);
+       
     }
 
     public List<Category> GetAll()
     {
+       
         return categories;
     }
 
@@ -58,8 +61,5 @@ public class CategoryDal : ICategoryDal
         
     }
 
-    public void Update(Category category)
-    {
-        throw new NotImplementedException();
-    }
+   
 }
